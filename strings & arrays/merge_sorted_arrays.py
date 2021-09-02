@@ -15,17 +15,16 @@ import sys
 
 #manually sort the arrays
 def insertionSort(arr):
+
     for i in range (1, len(arr)):
-
         curVal = arr[i]
-        curPos = i
+        pos = i
 
-        while curPos > 0 and arr[curPos - 1] > curVal:
-            
-            arr[curPos] = arr[curPos - 1]
-            curPos -= 1
+        while ((pos > 0) and (arr[pos-1] > curVal)):
+            arr[pos] = arr[pos-1]
+            pos -= 1
 
-        arr[curPos] = curVal
+        arr[pos] = curVal
 
     return arr
 
