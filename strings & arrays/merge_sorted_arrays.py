@@ -13,9 +13,26 @@ import sys
 #  2. INTEGER_ARRAY arr2
 #
 
+#manually sort the arrays
+def insertionSort(arr):
+    for i in range (1, len(arr)):
+
+        curVal = arr[i]
+        curPos = i
+
+        while curPos > 0 and arr[curPos - 1] > curVal:
+            
+            arr[curPos] = arr[curPos - 1]
+            curPos -= 1
+
+        arr[curPos] = curVal
+
+    return arr
+
+
 def merge_arrays(arr1, arr2):
     # Write your code here
-    merged = sorted(arr1 + arr2)
+    merged = insertionSort(arr1 + arr2)
 
     return merged
     
