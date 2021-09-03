@@ -19,16 +19,20 @@ def bubbleSort(arr):
 
             if arr[j] > arr[j+1]:
                 arr[j], arr[j+1] = arr[j+1], arr[j]
+                
+    return arr
 
 def are_anagrams(s1, s2):
     # Write your code here
     s1 = bubbleSort(list(s1))
-    s2 = bubbleSort(list(s2))
+    print(s1)
+    s2 = bubbleSort(list(s2)) 
+    print(s2)  
 
     if (s1 == s2):
-        return 1
+        return (1)
     else:
-        return 0
+        return (0)
     
 
 if __name__ == '__main__':
