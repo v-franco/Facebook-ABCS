@@ -13,10 +13,19 @@ import sys
 #  1. STRING s1
 #  2. STRING s2
 #
+def bubbleSort(arr):
+    for i in range (len(arr)):
+        for j in range (len(arr) - 1):
+
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
 
 def are_anagrams(s1, s2):
     # Write your code here
-    if (sorted(s1)) == (sorted(s2)):
+    s1 = bubbleSort(list(s1))
+    s2 = bubbleSort(list(s2))
+
+    if (s1 == s2):
         return 1
     else:
         return 0
