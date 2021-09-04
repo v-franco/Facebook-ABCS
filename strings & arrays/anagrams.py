@@ -25,9 +25,7 @@ def bubbleSort(arr):
 def are_anagrams(s1, s2):
     # Write your code here
     s1 = bubbleSort(list(s1))
-    print(s1)
     s2 = bubbleSort(list(s2)) 
-    print(s2)  
 
     if (s1 == s2):
         return (1)
