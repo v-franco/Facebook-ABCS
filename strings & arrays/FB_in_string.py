@@ -12,15 +12,15 @@ def fbInString(input):
 
     if not input:
         return False
-
-    for i in range(len(input)):
-        if input[i] == fb[counter]:
-            counter += 1
+    else:
+        for i in range(len(input)):
+            if input[i] == fb[counter]:
+                counter += 1
+            
+            if counter == len(fb):
+                return True
         
-        if counter == len(fb):
-            return True
-    
-    return False
+        return False
 
 if __name__ == '__main__':
     print(fbInString("ffffaaccccebbok"))
