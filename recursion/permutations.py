@@ -14,6 +14,20 @@ import sys
 
 def string_permutations(alphabet, permutation_length):
     # Write your code here
+    if len(alphabet) == 1:
+        return alphabet
+    
+    def recursivePermutations(alphabet, permutation_length, length, perm):
+        if permutation_length == 0:
+            print(perm)
+            return
+
+        for i in range(length):
+            newPerm = perm + alphabet[i]
+            recursivePermutations(alphabet, permutation_length-1, length, newPerm)
+
+    recursivePermutations(alphabet, permutation_length, len(alphabet), "")
+
         
 
 if __name__ == '__main__':
